@@ -1,0 +1,107 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditton Cruises & Harts Cruises</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="medium-6 cell">
+            <h1 class="header__title">Ditton Cruises & Harts Cruises</h1>
+          </div>
+          <div class="medium-6 cell">
+            <ul class="menu align-right nav">
+                <li><a class="nav__item" href="index.html">Home</a></li>
+                <li><a class="nav__item" href="boats.html">Boats & Prices</a></li>
+                <li><a class="nav__item" href="river.html">River Thames</a></li>
+                <li><a class="nav__item" href="contact.html">Contact</a></li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+
+    </header>
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+    <footer class="footer">
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="small-12 cell">
+              <h1 class="footer__title">Ditton Cruises & Harts Cruises</h1>
+              <ul class="menu align-left nav nav--footer">
+                  <li><a class="nav__item" href="index.html">Home</a></li>
+                  <li><a class="nav__item" href="boats.html">Boats & Prices</a></li>
+                  <li><a class="nav__item" href="river.html">River Thames</a></li>
+                  <li><a class="nav__item" href="contact.html">Contact</a></li>
+              </ul>
+              <p class="footer__disclaimer">©2018 Dittons Cruisers & Harts Cruisers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="{{root}}assets/js/app.js"></script>
+    <script>
+        var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: new google.maps.LatLng(51.396764, -0.311308),
+          mapTypeId: 'roadmap'
+        });
+
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var icons = {
+          parking: {
+            icon: iconBase + 'parking_lot_maps.png'
+          },
+          library: {
+            icon: iconBase + 'library_maps.png'
+          },
+          info: {
+            icon: iconBase + 'info-i_maps.png'
+          }
+        };
+
+        var features = [
+          {
+            position: new google.maps.LatLng(51.396764, -0.311308),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(51.393495, -0.333566),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
+            type: 'parking'
+          }
+        ];
+
+        // Create markers.
+        features.forEach(function(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map
+          });
+        });
+      }
+
+    </script> 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDshGBBqm-ylA1aupoA2XslXSqZ8dqBFrw&callback=initMap" type="text/javascript"></script>
+  </body>
+</html>
+
+ 

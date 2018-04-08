@@ -1,0 +1,36 @@
+/*----------------------------------------------------------------------------*\
+    #APP FOOTER
+\*----------------------------------------------------------------------------*/
+
+.footer {
+    padding: 1rem 0;
+    background-color: $blue;
+    color: #fff;
+
+    &__title {
+        font-size: 1.25rem;
+        margin: 2rem 1rem ;
+    }
+
+    &__disclaimer {
+        font-size: 0.75rem;
+        margin: 2rem 1rem 1rem;
+    }
+}
+
+
+@include breakpoint(medium) {
+    .footer {
+        padding: 3rem 0;
+    
+        &__title {
+            font-size: 1.75rem;
+            margin: 2rem 1rem ;
+        }
+    
+        &__disclaimer {
+            font-size: 0.75rem;
+            margin: 5rem 1rem 1rem;
+        }
+    }
+}

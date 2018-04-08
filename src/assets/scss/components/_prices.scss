@@ -1,0 +1,43 @@
+.prices {
+    margin-top: 3rem;
+
+    &__row {
+        text-align: center;
+        background-color: #fff;
+    }
+
+
+    &__header {
+        background-color: #D6DFF2;
+        border: none;
+        &--top {
+
+            text-align: center;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 300;
+        margin-top: 5rem;
+        width: 26%;
+    }
+
+    &__sub-title {
+        font-size: 0.65rem;
+        text-align: center;
+    }
+
+    &__name {
+        text-align: left;
+        width: 10rem;
+        
+    }
+}
+
+.focused {
+    background: $orange;
+    color: #fff;
+}
+
+

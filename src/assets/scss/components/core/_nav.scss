@@ -1,0 +1,8 @@
+.nav {
+    &__item {
+        color: #fff;
+    }
+    &__item:hover {
+        color: $orange;
+    }
+}
