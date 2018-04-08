@@ -168,9 +168,10 @@
     .form {
         margin:-3rem 0 2rem;
 
-        padding: 1rem;
+        padding: 1rem 0;
         &__container {
-            margin-top: -12rem;
+            margin: -12rem 0 0;
+            padding: 0 1rem;
         }
     
         &__title {
