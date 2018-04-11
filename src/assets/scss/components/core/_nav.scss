@@ -58,7 +58,7 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
   }
 
    @media screen and (max-width: 39.9375em) {
-     padding: 0.75rem;
+     padding: 0.75rem 0;
 
     .top-bar-title {
       position: relative;
@@ -67,8 +67,6 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
       span {
         position: absolute;
         right: 0;
-        border: 1px solid $white;
-        border-radius: 5px;
         padding: 0.25rem 0.45rem;
         top: 50%;
         transform: translateY(-50%);

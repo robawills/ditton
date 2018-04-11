@@ -4,14 +4,21 @@
 
 .header {
     width: 100%;
-    padding: 1rem;
+    padding: 0;
     background-color: $green;
     color: #fff;
 
+    @include breakpoint(medium) {
+        padding: 1rem;
+    }
+
     &__title {
-        font-size: 1.4rem;
+        font-size: 1rem;
         margin: 0;
         font-family: lora;
+        @include breakpoint(medium) {
+            font-size: 1.4rem;
+        }
     }
 }
 

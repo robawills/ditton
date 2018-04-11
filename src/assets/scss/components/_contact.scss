@@ -1,12 +1,19 @@
 .contact {
     &__tel {
-        font-size: 3rem;
+        font-size: 2rem;
         color:$blue;
         font-weight: bold;
+        @include breakpoint(medium) {
+            font-size: 3rem;
+        }
     }
     &__email {
-        font-size: 1.75rem;
+        font-size: 1.25rem;
         font-weight: bold;
         color:$blue;
+
+        @include breakpoint(medium) {
+            font-size: 1.75rem;
+        }
     }
 }
