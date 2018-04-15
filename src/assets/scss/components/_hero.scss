@@ -1,8 +1,7 @@
 .hero {
     width: 100%;
-    min-height: 25rem;
-    height: 70vh;
-    background: rgb(54, 50, 50);
+    min-height: 18rem;
+    height: 50vh;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -12,13 +11,33 @@
     }
 
     &__title {
-        font-size: 3rem;
+        font-size: 1.75rem;
+        line-height: 2rem;
         color:#fff;
-        margin: 3rem 0;
+        margin: 2rem 0;
     }
 
     &--small {
-        height: 50vh;
+        height: 20vh;
+        min-height: 12rem;
     }
 
+}
+
+@include breakpoint(medium) {
+    .hero {
+        min-height: 25rem;
+        height: 70vh;
+    
+        &__title {
+            font-size: 3rem;
+            line-height: 3.25rem;
+            margin: 3rem 0;
+        }
+    
+        &--small {
+            height: 50vh;
+        }
+    
+    }
 }

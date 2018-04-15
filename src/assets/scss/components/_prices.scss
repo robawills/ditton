@@ -2,8 +2,9 @@
     margin-top: 3rem;
 
     &__row {
-        text-align: center;
         background-color: #fff;
+        font-size: 0.7rem;
+        text-align: left;
     }
 
 
@@ -21,6 +22,7 @@
         font-weight: 300;
         margin-top: 5rem;
         width: 26%;
+        
     }
 
     &__sub-title {
@@ -31,7 +33,8 @@
     &__name {
         text-align: left;
         width: 10rem;
-        
+        font-weight: bold;
+        font-size: 1rem;
     }
 }
 
@@ -41,3 +44,11 @@
 }
 
 
+@include breakpoint(medium) {
+    .prices {    
+        &__row {
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+}

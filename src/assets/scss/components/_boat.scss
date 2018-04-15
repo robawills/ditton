@@ -1,20 +1,21 @@
 .boat {
     &__img {
         width: 100%;
-        height: 10rem;
+        height: 6rem;
         background-color: indianred;
     }
 
     &__title {
-        font-size: 1.25rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
         margin: 0.75rem 0 0.25rem;
     }
 
     &__lead {
         font-weight: bold;
         margin: 0.25rem 0;
-        font-size: 1rem;
-        line-height: 1.25rem;
+        font-size: 0.75rem;
+        line-height: 1rem;
     }
 
     &__copy {
@@ -27,11 +28,41 @@
         color: #fff;
         margin-bottom: 2rem;
         padding: 0.5rem 0.75rem;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         &:hover {
             background-color: $orange;
             color:$blue;
         }
-
     }
+}
+
+@include breakpoint(medium) {
+    .boat {
+        &__img {
+            height: 10rem;
+        }
+    
+        &__title {
+            font-size: 1.25rem;
+            margin: 0.75rem 0 0.25rem;
+        }
+    
+        &__lead {
+            margin: 0.25rem 0;
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
+    
+        &__copy {
+            font-size: 0.75rem;
+            margin: 0.25rem 0 0.75rem;
+        }
+    
+        &__button {
+            margin-bottom: 2rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8rem;
+        }
+    }
+
 }
